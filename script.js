@@ -148,12 +148,17 @@ function listenToUserSelect() {
         } else {
             ampm = "AM";
         }
+    hours = hours < 10 ? "0" + hours : hours;
     // Minutes part from the timestamp
    var minutes = date.getMinutes();
    minutes = minutes < 10 ? "0" + minutes : minutes;
     // enable alarm
     alarmTime = hours + ":" + minutes + " " + ampm;
     isAlarmSet = true;
+
+    selectMenu[0].value = hours
+    selectMenu[1].value = minutes
+    selectMenu[2].value = ampm
 
     // disable field
     content.classList.add("disable");
