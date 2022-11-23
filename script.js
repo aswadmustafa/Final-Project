@@ -156,6 +156,7 @@ function listenToUserSelect() {
     alarmTime = hours + ":" + minutes + " " + ampm;
     isAlarmSet = true;
 
+    // set value to dropdownlist
     selectMenu[0].value = hours
     selectMenu[1].value = minutes
     selectMenu[2].value = ampm
